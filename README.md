@@ -1,0 +1,2 @@
+# gstatic
+Static file server 
