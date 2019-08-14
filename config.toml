@@ -1,0 +1,21 @@
+[Server]
+HttpPort=3000
+[Server.SSL]
+Enabled=false
+PrivateKey=""
+CertificateChain=""
+
+[[Static]]
+Route="/files"
+Folder="data/files"
+    [Static.Headers]
+    Cache-Control="public,maxage=60,no-cache"
+
+[[Static]]
+Route="/mdl"
+Folder="data/mdl"
+    [Static.Headers]
+    Cache-Control="public,maxage=360,no-cache"
+
+[Proxy]
+Folder="data/proxy"

@@ -1,0 +1,1 @@
+gox -osarch="linux/amd64" -output=dist/gstatic_linux_amd64
