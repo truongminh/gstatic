@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
-	"github.com/google/logger"
 )
 
 type FileRoute struct {
@@ -30,6 +29,7 @@ type Config struct {
 	}
 }
 
+// NewConfig parse config from config.toml
 func NewConfig() Config {
 	c := Config{}
 	file := flag.String("conf", "config.toml", "config file")

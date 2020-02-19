@@ -9,7 +9,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/google/logger"
 )
 
 func proxy(c Config) {

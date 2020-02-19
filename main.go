@@ -2,15 +2,13 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"os"
 
-	"github.com/google/logger"
+	"gstatic/clog"
 )
 
 func main() {
-	logger.Init("gstatic", true, false, ioutil.Discard)
 	c := NewConfig()
 	static(c)
 	proxy(c)
@@ -39,3 +37,5 @@ func listen(c Config) {
 		logger.Fatalf("listening error: %s", err.Error())
 	}
 }
+
+var logger = clog.Prefix("main")
