@@ -1,1 +1,1 @@
-gox -osarch="linux/amd64" -output=dist/gstatic_linux_amd64
+GOOS=linux GOARCH=amd64 go build -o dist/gstatic_linux_amd64
